@@ -1,0 +1,89 @@
+\documentclass{article}
+
+\def\tightlist{}
+
+\usepackage{booktabs}
+\usepackage{caption}	 % http://mirror.easyname.at/ctan/macros/latex/contrib/caption/caption-eng.pdf
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{titlesec}
+
+\newcommand{\sectionbreak}{\clearpage}
+
+%Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+\setcounter{section}{1}
+
+%Import the natbib package and sets a bibliography style
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{abbrvnat}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+
+\Huge
+\textbf{$title$}
+
+\vspace{0.8cm}
+
+$for(author)$
+\Large
+\centerline{\textbf{$author.name$}}
+$if(author.institution)$
+\large
+\centerline{$author.institution$}
+$endif$
+$if(author.department)$
+\large
+\centerline{$author.department$}
+$endif$
+$if(author.city)$
+\large
+\centerline{$author.city$}
+$endif$
+$if(author.country)$
+\large
+\centerline{$author.country$}
+$endif$
+\small
+\centerline{$author.email$}
+\centerline{$date$}
+$endfor$
+
+\vspace{0.8cm}
+
+\includegraphics[width=0.4\textwidth]{university}
+
+\end{center}
+\end{titlepage}
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+%% \maketitle
+
+\section*{Abstract}
+\thispagestyle{plain}
+\begin{center}
+    \large
+    \vspace{0.9cm}
+    $abstract$
+\end{center}
+\newpage
+\tableofcontents
+
+$body$
+
+$if(bibliography)$
+	\bibliography{$bibliography$}
+$endif$
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-authordraft.tex'.
