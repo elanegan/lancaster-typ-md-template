@@ -23,6 +23,7 @@ formatting with content (see HTML and CSS, and why Markdown exists!)
 
 ## Where?
 
+* Makefile, base directory (.)
 * report.md, base directory (.)
 * report.bib, base directory (.)
 * preamble.tex, base directory (.)
@@ -37,3 +38,6 @@ Created 2023.
 ## Who?
 
 Ewan Lanegan, SCC student, Lancaster University.
+
+For other SCC students, who are just as crazy as me about using some other
+random format nobody advised.
