@@ -1,0 +1,121 @@
+\documentclass{article}
+
+\def\tightlist{}
+
+\usepackage{booktabs}
+\usepackage{caption}	 % http://mirror.easyname.at/ctan/macros/latex/contrib/caption/caption-eng.pdf
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{titlesec}
+
+\newcommand{\sectionbreak}{\clearpage}
+
+%Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+\setcounter{section}{1}
+
+%Import the natbib package and sets a bibliography style
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{abbrvnat}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+
+\Huge
+\textbf{On the Helpfulness of Using Markdown for Academic Writing}
+
+\vspace{0.8cm}
+
+\Large
+\centerline{\textbf{Joe Bloggs}}
+\large
+\centerline{Lancaster University}
+\large
+\centerline{Lancaster}
+\large
+\centerline{England}
+\small
+\centerline{an.example@lancaster.ac.uk}
+\centerline{31-02-2024}
+
+\vspace{0.8cm}
+
+\includegraphics[width=0.4\textwidth]{university}
+
+\end{center}
+\end{titlepage}
+
+
+%% \maketitle
+
+\section*{Abstract}
+\thispagestyle{plain}
+\begin{center}
+    \large
+    \vspace{0.9cm}
+    With more people using LaTeX for reports in Lancaster's SCC
+    department, development of a faster and more intuitive writing
+    system is the clear next step.
+\end{center}
+\newpage
+\tableofcontents
+
+\section{INTRODUCTION}
+
+Lots of great stuff is available using Markdown \citep{markdown} with
+Pandoc \citep{pandoc}! See those references? They are automatically
+generated behind the scenes, and use easy IDs to reference in your
+Markdown file. YAML is used at the header of the Markdown file, to add
+some more attributes such as the abstract and author info.
+
+\subsection{What's this? A subsection?}
+
+Look at that! Using easy headers we can create subsections that show up
+in the table of contents. We have one subsection,
+
+\subsubsection{And more}
+
+With more text\ldots{}
+
+No more subsections can be created beyond this level.
+
+\section{Cool Markdown Things}
+
+We have easy \textbf{bold} formatting, \emph{italics}, and even
+\emph{\textbf{BOTH}}! Yet still readable. What about code?
+\texttt{programs} can be in monospace. I am working on having code
+blocks available.
+
+Less distractions should make writing more fun and faster. Most of the
+tedium of the report formatting is done:
+
+\begin{itemize}
+\tightlist
+\item
+  Title Page
+\item
+  Abstract Page
+\item
+  Table of Contents
+\item
+  Sections on new pages
+\item
+  References section at the end
+\end{itemize}
+
+So now, get writing (and referencing)! See BibLaTeX docs for how to
+write a bibliography (most journals have .bib references available to
+copy).
+
+\emph{Enjoy!}
+
+	\bibliography{report}
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-authordraft.tex'.
